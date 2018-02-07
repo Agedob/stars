@@ -1,11 +1,14 @@
 
 def draw_stars(argu):
-    newarr=[]
     for i in argu:
-        cont = []
-        for x in range(0, i, 1):
-            cont.append(1)
-        newarr.append(cont)
-    return newarr
-a = hacks(multiply([1,2,3],2))
-print a
+        empt = ""
+        if type(i) == str:
+            z = i[0].lower()
+            i = len(i)
+        else:
+            z = '*'
+        for x in range(0, i):
+            empt += z
+        print empt
+a = [4, "Tom", 1, "Michael", 5, 7, "Jimmy Smith"]
+draw_stars(a)
